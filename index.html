@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>My Personal GitHub Page</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="https://kit.fontawesome.com/a49fc1e5bf.js" crossorigin="anonymous"></script>
@@ -34,10 +34,11 @@
         </section>
         <section>
             <h2><i class="fa-solid fa-diagram-project"></i> Projects</h2>
-            <ul>
-                <li><a href="https://doi.org/10.1016/j.oceaneng.2023.115745" target="_blank">Project 1 (2023): KUFish enables to swim fast underwater and glide in the air after reaching the leaping speed of 1.45 m/s</a>
-                    <p> <i class="fa-solid fa-video"></i> The videos are about the beat-glide kinematics of the caudal fin after leaping of water with the body tilting angles of 30 & 60 degrees.</p>
-                        <video id="video1" controls loop width="400">
+                <div class="custom-background">
+                Project 1 (2023): KUFish enables to swim fast underwater and glide in the air after reaching the leaping speed of 1.45 m/s. (<a href="https://doi.org/10.1016/j.oceaneng.2023.115745" target="_blank">Link</a>)
+                    <p> <i class="fa-solid fa-video"></i> The videos are about the beat-glide kinematics of the caudal fin after leaping out of water with the body tilting angles of 30 & 60 degrees.</p>
+                </div>
+                    <video id="video1" controls loop width="400">
                             <source src="assets/videos/Video-Body angle = 30deg.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -45,38 +46,33 @@
                             <source src="assets/videos/Video-Body angle = 60deg.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
-
-                        <script>
-                            // Delay video playback by 2 minutes (120,000 milliseconds)
-                            setTimeout(() => {
-                                document.getElementById('video1').play();
-                                document.getElementById('video2').play();
-                            }, 12); // 2 minutes
-                        </script>
-
-               </li>
-               <li><a href="https://doi.org/10.1016/j.ast.2024.109371" target="_blank">Project 2 (2024): Comparative study of the flapping-wing stability of KUBeetle flying on Earth and Mars</a>
-                        <p> <i class="fa-solid fa-video"></i> The videos demonstrate the flight stability of KUBeetle under a disturbed lateral airspeed (7% of mean flapping speed) in Earth's conditions (left video) and Martian conditions (right video).</p>
-                            <video id="video3" controls loop width="370">
+        
+                <p></p> 
+                <div class="custom-background">
+                Project 2 (2024): Comparative study of the flapping-wing stability of KUBeetle flying on Earth and Mars. (<a href="https://doi.org/10.1016/j.ast.2024.109371" target="_blank">Link</a>)
+                <p> <i class="fa-solid fa-video"></i> The videos demonstrate the flight stability of KUBeetle under a disturbed lateral airspeed (7% of mean flapping speed) in Earth's conditions (left) and Martian conditions (right).</p>
+                </div>    
+                        <video id="video3" controls loop width="470">
                                 <source src="assets/videos/Video_Earth_overlap_2.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
-                            <video id="video4" controls loop width="450">
+                            <video id="video4" controls loop width="550">
                                 <source src="assets/videos/Video_Mars_overlap_2.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
-    
+
                             <script>
-                                // Delay video playback by 2 minutes (120,000 milliseconds)
+                                 // Add an event listener to the button for user interaction
+                                document.addEventListener('click', () => {
+                                    // Play the videos when the button is clicked
                                 setTimeout(() => {
+                                    document.getElementById('video1').play();
+                                    document.getElementById('video2').play();
                                     document.getElementById('video3').play();
                                     document.getElementById('video4').play();
-                                }, 12); // 2 minutes
+                                },1000);
+                            }, { once: true }); // Ensure the event listener runs only once
                             </script>
-                
-                </li>
-                <li><a href="#">Project 3</a></li>
-            </ul>
         </section>
         <section>
             <h2> <i class="fa-solid fa-envelope-open-text"></i> Contact</h2>
