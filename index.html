@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="https://kit.fontawesome.com/a49fc1e5bf.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div class="container">
     <header style="display: flex; align-items: center; gap: 50px;">
@@ -18,15 +20,42 @@
         </p>
     </div>
     </header>
+
     <main>
         <section>
          <h2><i class="fa-solid fa-circle-user"></i> About Me</h2>
-            <p>Hi! I'm a Phd candidate in bio-inspired robotics with a passion for mathematics, fluid dynamics, and coding.</p>
+            <p>I am a Ph.D. candidate at Konkuk University (KU) under the supervision of Prof. Park Hoon Cheol. 
+            I am expected to graduate in February 2026. 
+            In 2021, I earned my master's degree in the same field, also under Prof. Park's guidance. 
+            Prior to my studies at KU, I obtained my bachelor's degree in Mechanical and Aerospace Engineering from Ho Chi Minh City University of Technology (HCMUT) in 2018.
+            The B.S. degree is accredited by the Commission des Titres d'Ingénieur (CTI) in France and recognized by the European Network for Accreditation of Engineering Education (ENAEE). 
+            I have a background in fluid dynamics and a strong interest in robotics, particularly in both areas of simulation and model fabrication. I have been focused on the locomotion of flapping wing robots in the air and tail-beating robotic models under water.
+            I am also an avid learner, eager to explore the field of applied mathematics and coder. My goal is to contribute to the field of unmanned vehicle systems, and I welcome any discussions or collaborations in this research area.</p>
         </section>
         <section>
             <h2><i class="fa-solid fa-diagram-project"></i> Projects</h2>
             <ul>
-                <li><a href="#">Project 1</a></li>
+                <li><a href="#">Project 1</a>
+                    <p><i class="fa-solid fa-video"></i> My Video</p>
+                    <p>The videos are about the tail beat-glide motion of KUFish after leaping of water surface with the body tilting angles of 30 & 60 degrees.</p>
+                        <video id="video1" controls loop width="300">
+                            <source src="assets/videos/Video-Body angle = 30deg.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <video id="video2" controls loop width="300">
+                            <source src="assets/videos/Video-Body angle = 60deg.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+
+                        <script>
+                            // Delay video playback by 2 minutes (120,000 milliseconds)
+                            setTimeout(() => {
+                                document.getElementById('video1').play();
+                                document.getElementById('video2').play();
+                            }, 120000); // 2 minutes
+                        </script>
+
+                </li>
                 <li><a href="#">Project 2</a></li>
                 <li><a href="#">Project 3</a></li>
             </ul>
