@@ -54,7 +54,7 @@ section {
 
 section h2 {
     font-size: 2em;
-    color: rgb(0, 195, 255);
+    color: rgb(0, 125, 255);
 }
 
 section p {
@@ -71,8 +71,8 @@ footer {
 }
 
 .custom-background {
-    background-color: #ecf6ff; /* Light blue background color */
-    width: 100vw; /* Set the width to 80% of the parent container */
+    background-color: #c8e4fc; /* Light blue background color */
+    width: 100%; /* Set the width to 80% of the parent container */
     margin: 0 auto; /* Center the div horizontally */
     padding: 0px; /* Add padding inside the div */
     border-radius: 0px; /* Optional: Add rounded corners */
