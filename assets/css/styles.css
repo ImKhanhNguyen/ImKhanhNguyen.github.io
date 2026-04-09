@@ -43,7 +43,7 @@ header h1, header p {
     font-style: normal;
     font-weight: normal;
     margin-left: 0px;
-    color: rgb(213, 79, 21);
+    color: darkgreen;
 }
 
 /* Section styling */
@@ -56,7 +56,7 @@ section h2 {
     font-style: normal;
     font-weight: normal;
     margin-left: 0px;
-    color: rgb(213, 79, 21);
+    color: darkgreen;
 }
 
 /* Container styling */
@@ -66,15 +66,13 @@ section h2 {
     padding: 10px;
 }
 
-
-
 .italic {
     font-size: 0.9em;
     font-style: italic;
     font-weight: normal;
     margin-top: 0px;
     margin-left: 00px;
-    Color: rgba(185, 65, 29, 1);
+    color: rgba(34, 139, 34, 0.8);
 }
 
 
@@ -126,7 +124,7 @@ footer {
 }
 
 .custom-background {
-    background-color: rgb(213, 79, 21); /* Light blue background color */
+    background-color: darkgreen; /* Light blue background color */
     width: 100%; /* Set the width to 80% of the parent container */
     height: 113px;
     margin: 0px 0px; /* Center the div horizontally */
