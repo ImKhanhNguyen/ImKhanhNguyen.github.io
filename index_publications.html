@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Nguyen Research Hub</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://kit.fontawesome.com/a49fc1e5bf.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+
+<header> 
+
+
+<div class="custom-background">
+<p class="Sitename">Nguyen Research Hub</p>
+<hr>
+
+<nav>
+
+
+<button class="btn" style="margin-left: 325px;">
+<a style="color: rgb(250, 246, 246);" href="index.html">HOME</a></button>
+
+
+<button class="btn"><a style="color: rgb(250, 246, 246);"href="index_research.html">RESEARCH</a></button>
+
+<button class="btn" style="background-color: white;"> 
+<a style="color: rgb(213, 79, 21);">PUBLICATIONS</a></button>
+
+<button class="btn"><a style="color: rgb(250, 246, 246);" href="index_news.html">NEWS</a></button>
+
+</nav>
+
+</div>
+
+
+
+</header>
+
+<main>
+
+<section>
+    <p style="margin-left: 325px; margin-right: 325px; margin-bottom: 50px; "> 
+      Here is a list of my publications, including journal articles, conference papers, and book chapters. 
+      The list is organized in reverse chronological order, with the most recent publications appearing first. 
+      Each entry includes the title of the publication, the names of the authors, the name of the journal or conference, 
+      and a link to the publication if available. For more details about my research and publications, please visit</p> 
+
+    <div id="journal-publications-list" style="margin-left: 325px; margin-right: 325px;"></div>
+    <div id="conference-publications-list" style="margin-left: 325px; margin-right: 325px; margin-top: 40px;"></div>
+</section>
+
+</main>
+
+<script src="assets/data/publications.js"></script>
+<script>
+    async function loadPublications() {
+        const journalContainer = document.getElementById('journal-publications-list');
+        const conferenceContainer = document.getElementById('conference-publications-list');
+        if (!journalContainer || !conferenceContainer) return;
+
+        try {
+            let publications = [];
+            let conferencePublications = [];
+            if (window.location.protocol === 'file:' && Array.isArray(window.PUBLICATIONS_DATA)) {
+                publications = window.PUBLICATIONS_DATA;
+                conferencePublications = Array.isArray(window.Conference_PUBLICATIONS_DATA)
+                    ? window.Conference_PUBLICATIONS_DATA
+                    : [];
+            } else {
+                const response = await fetch('assets/data/publications.json');
+                if (!response.ok) throw new Error('Failed to load publications');
+                publications = await response.json();
+                conferencePublications = Array.isArray(window.Conference_PUBLICATIONS_DATA)
+                    ? window.Conference_PUBLICATIONS_DATA
+                    : [];
+            }
+
+            const formatManuscriptTitle = (text, useEtAlRule = false) => {
+                const firstSentenceEnd = text.indexOf('. ');
+                if (firstSentenceEnd === -1) return text;
+
+                const authorsPart = text.slice(0, firstSentenceEnd + 2);
+                const authorsOnly = text.slice(0, firstSentenceEnd);
+                const rest = text.slice(firstSentenceEnd + 2);
+
+                const normalizedAuthors = authorsOnly.replace(/<[^>]+>/g, '');
+                const authorList = normalizedAuthors
+                    .split(',')
+                    .map((author) => author.trim())
+                    .filter(Boolean);
+
+                const formattedAuthorsPart = useEtAlRule && authorList[0] === 'Nguyen K' && authorList.length > 2
+                    ? '<strong>Nguyen K</strong> et al. '
+                    : authorsPart;
+
+                const titleMatch = rest.match(/^(.*?)(?=\s(?:Submitted to|Under review|J\. |Aerosp\. Sci\. Technol\.|Ocean Eng\.|Acta Astronautica|Ocean Engineering|J\. Adv\. Res\. Fluid Mech\. Therm\. Sci\.|ICIUS|Proceedings of KSAS|Proceedings of the Korean Society of Mechanical Engineers Annual Meeting|SAWAE))/);
+                if (!titleMatch || !titleMatch[1]) return text;
+
+                const manuscriptTitle = titleMatch[1];
+                const remaining = rest.slice(manuscriptTitle.length);
+                return `${formattedAuthorsPart}<u style="color: rgb(213, 79, 21);">${manuscriptTitle}</u>${remaining}`;
+            };
+
+            const extractYear = (text) => {
+                if (/under review/i.test(text)) return 'In Review';
+                const yearMatches = text.match(/\b(19|20)\d{2}\b/g);
+                return yearMatches && yearMatches.length > 0 ? yearMatches[0] : 'Unknown';
+            };
+
+            const orderYears = (groupedPublications) => Object.keys(groupedPublications).sort((a, b) => {
+                const aNum = Number(a);
+                const bNum = Number(b);
+                const aIsYear = Number.isFinite(aNum) && a.length === 4;
+                const bIsYear = Number.isFinite(bNum) && b.length === 4;
+
+                if (aIsYear && bIsYear) return bNum - aNum;
+                if (aIsYear) return -1;
+                if (bIsYear) return 1;
+                return a.localeCompare(b);
+            });
+
+            const renderGroupedList = (items, title, showYearSections = true, useEtAlRule = false) => {
+                if (!showYearSections) {
+                    const flatItems = items
+                        .map((item, index) => {
+                            const formattedText = formatManuscriptTitle(item.text, useEtAlRule);
+                            const pdfLink = item.pdf
+                                ? ` <a href="${item.pdf}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; font-weight: bold; color: rgba(0, 0, 0, 1);">[PDF]</a>`
+                                : '';
+
+                            return `<p style="margin-bottom: -12px;"><span style="color: rgb(213, 79, 21);">[${index + 1}]</span> ${formattedText}${pdfLink}</p>`;
+                        })
+                        .join('');
+
+                    return `<h2 style="color: rgb(213, 79, 21); margin-top: 20px; margin-bottom: 14px;">${title}</h2>${flatItems}`;
+                }
+
+                const groupedPublications = items.reduce((groups, item) => {
+                    const year = extractYear(item.text);
+                    if (!groups[year]) groups[year] = [];
+                    groups[year].push(item);
+                    return groups;
+                }, {});
+
+                return `<h2 style="color: rgb(213, 79, 21); margin-top: 20px; margin-bottom: 14px;">${title}</h2>${orderYears(groupedPublications)
+                    .map((year) => {
+                        const yearItems = groupedPublications[year]
+                            .map((item, index) => {
+                                const formattedText = formatManuscriptTitle(item.text, useEtAlRule);
+                                const pdfLink = item.pdf
+                                    ? ` <a href="${item.pdf}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; font-weight: bold; color: rgba(0, 0, 0, 1);">[PDF]</a>`
+                                    : '';
+
+                                return `<p style="margin-bottom: -12px;"><span style="color: rgb(213, 79, 21);">[${index + 1}]</span> ${formattedText}${pdfLink}</p>`;
+                            })
+                            .join('');
+
+                        return `<h3 style="color: rgb(213, 79, 21); margin-top: 28px; margin-bottom: 12px;">${year}</h3>${yearItems}`;
+                    })
+                    .join('')}`;
+            };
+
+            journalContainer.innerHTML = renderGroupedList(publications, 'Journal Publications', true, false);
+            conferenceContainer.innerHTML = renderGroupedList(conferencePublications, 'Conference Publications', false, true);
+        } catch (error) {
+            journalContainer.innerHTML = '<p>Unable to load publications automatically. Please try again.</p>';
+            conferenceContainer.innerHTML = '';
+        }
+    }
+
+    loadPublications();
+</script>
+
+
+    <footer>
+        <p>&copy; 2025 My GitHub Page</p>
+    </footer>
+</div>
+</body>
+</html>

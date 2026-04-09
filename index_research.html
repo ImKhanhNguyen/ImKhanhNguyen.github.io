@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Nguyen Research Hub</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://kit.fontawesome.com/a49fc1e5bf.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+
+<header> 
+
+
+<div class="custom-background">
+<p class="Sitename">Nguyen Research Hub</p>
+<hr>
+
+<nav>
+
+
+<button class="btn" style="margin-left: 325px;">
+<a style="color: rgb(250, 246, 246);" href="index.html">HOME</a></button>
+
+
+<button class="btn" style="background-color: white;"> 
+<a style="color: rgb(213, 79, 21);">RESEARCH</a></button>
+
+<button class="btn">
+<a style="color: rgb(250, 246, 246);" href="index_publications.html">PUBLICATIONS</a></button>
+
+
+<button class="btn"><a style="color: rgb(250, 246, 246);" href="index_news.html">NEWS</a></button>
+
+</nav>
+
+</div>
+
+
+
+</header>
+
+<main>
+
+<section>
+            <h2><i class="fa-solid fa-diagram-project"></i> Projects</h2>
+                <div class="custom-background">
+                    <b>Project 1 (2023)</b>: KUFish enables to swim fast underwater and glide in the air after reaching the leaping speed of 1.45 m/s. (<a href="https://doi.org/10.1016/j.oceaneng.2023.115745" target="_blank" style = "color: rgb(185, 65, 29)">Link</a>)
+                    <p> <i class="fa-solid fa-video"></i> The videos are about the beat-glide kinematics of the caudal fin after leaping out of water with the body tilting angles of 30 & 60 degrees.</p>
+                </div>
+                <img src="assets/images/F2_Gliding_fish.jpg" alt="Profile Photo" style="height: auto; max-height: 155px; border-radius: 0%;">
+                <p></p> 
+                        <video id="video1" controls loop width="380" height="310">
+                            <source src="assets/videos/Video-Body angle = 30deg.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <video id="video2" controls loop width="380" height="310">
+                            <source src="assets/videos/Video-Body angle = 60deg.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                <p></p> 
+                <div class="custom-background">
+                    <b>Project 2 (2024)</b>: Comparative study of the flapping-wing stability of KUBeetle flying on Earth and Mars. (<a href="https://doi.org/10.1016/j.ast.2024.109371" target="_blank" style = "color: rgb(185, 65, 29)">Link</a>)
+                    <p> <i class="fa-solid fa-video"></i> The videos demonstrate the system responses of KUBeetle under a disturbed left-to-right, lateral airspeed (its magnitude is about 7% of mean flapping speed) in the air conditions on Earth (left) and Mars (right).</p>
+                </div>    
+                
+                <div style="width: 800px; height: 400px; overflow: hidden; position: relative;">
+                    <video id="video3" controls loop style="position: absolute; right: -24px; width: 800px; height: 400px;">
+                    <source src="assets/videos/longitudinal_disturbed_motion.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div style="width: 800px; height: 400px; overflow: hidden; position: relative;">
+                    <video id="video4" controls loop style="position: absolute; right: -24px; width: 800px; height: 400px;">
+                    <source src="assets/videos/side_disturbed_motion.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div style="width: 800px; height: 400px; overflow: hidden; position: relative;">
+                    <video id="video5" controls loop style="position: absolute; right: -24px; width: 800px; height: 400px;">
+                    <source src="assets/videos/vertical_disturbed_motion.mp4" type="video/mp4">
+                    </video>
+                </div>
+                            <script>
+                                 // Add an event listener to the button for user interaction
+                                document.addEventListener('click', () => {
+                                    // Play the videos when the button is clicked
+                                setTimeout(() => {
+                                    document.getElementById('video1').play();
+                                    document.getElementById('video2').play();
+                                    document.getElementById('video3').play();
+                                    document.getElementById('video4').play();
+                                    document.getElementById('video5').play();
+                                },1000);
+                            }, { once: true }); // Ensure the event listener runs only once
+                            </script>
+        </section>
+
+
+
+
+</main>
+    <footer>
+        <p>&copy; 2025 My GitHub Page</p>
+    </footer>
+</div>
+</body>
+</html>
