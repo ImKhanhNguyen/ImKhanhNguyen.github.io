@@ -29,7 +29,7 @@
 <button class="btn"><a style="color: rgb(250, 246, 246);"href="index_research.html">RESEARCH</a></button>
 
 <button class="btn" style="background-color: white;"> 
-<a style="color: rgb(213, 79, 21);">PUBLICATIONS</a></button>
+<a style="color: darkgreen;">PUBLICATIONS</a></button>
 
 <button class="btn"><a style="color: rgb(250, 246, 246);" href="index_news.html">NEWS</a></button>
 
@@ -80,7 +80,7 @@
                     : [];
             }
 
-            const formatManuscriptTitle = (text, useEtAlRule = false) => {
+            const formatManuscriptTitle = (text, useEtAlRule = false, manuscriptUrl = '') => {
                 const firstSentenceEnd = text.indexOf('. ');
                 if (firstSentenceEnd === -1) return text;
 
@@ -103,7 +103,11 @@
 
                 const manuscriptTitle = titleMatch[1];
                 const remaining = rest.slice(manuscriptTitle.length);
-                return `${formattedAuthorsPart}<u style="color: rgb(213, 79, 21);">${manuscriptTitle}</u>${remaining}`;
+                const linkedTitle = manuscriptUrl
+                    ? `<a href="${manuscriptUrl}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;"><u style="color: darkgreen;">${manuscriptTitle}</u></a>`
+                    : `<u style="color: darkgreen;">${manuscriptTitle}</u>`;
+
+                return `${formattedAuthorsPart}${linkedTitle}${remaining}`;
             };
 
             const extractYear = (text) => {
@@ -128,16 +132,13 @@
                 if (!showYearSections) {
                     const flatItems = items
                         .map((item, index) => {
-                            const formattedText = formatManuscriptTitle(item.text, useEtAlRule);
-                            const pdfLink = item.pdf
-                                ? ` <a href="${item.pdf}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; font-weight: bold; color: rgba(0, 0, 0, 1);">[PDF]</a>`
-                                : '';
+                            const formattedText = formatManuscriptTitle(item.text, useEtAlRule, item.pdf);
 
-                            return `<p style="margin-bottom: -12px;"><span style="color: rgb(213, 79, 21);">[${index + 1}]</span> ${formattedText}${pdfLink}</p>`;
+                            return `<p style="margin-bottom: -0px;">${index + 1}. ${formattedText}</p>`;
                         })
                         .join('');
 
-                    return `<h2 style="color: rgb(213, 79, 21); margin-top: 20px; margin-bottom: 14px;">${title}</h2>${flatItems}`;
+                    return `<h2 style="color: darkgreen; margin-top: 20px; margin-bottom: 14px;">${title}</h2>${flatItems}`;
                 }
 
                 const groupedPublications = items.reduce((groups, item) => {
@@ -147,25 +148,22 @@
                     return groups;
                 }, {});
 
-                return `<h2 style="color: rgb(213, 79, 21); margin-top: 20px; margin-bottom: 14px;">${title}</h2>${orderYears(groupedPublications)
+                return `<h2 style="color: darkgreen; margin-top: 20px; margin-bottom: 14px;">${title}</h2>${orderYears(groupedPublications)
                     .map((year) => {
                         const yearItems = groupedPublications[year]
                             .map((item, index) => {
-                                const formattedText = formatManuscriptTitle(item.text, useEtAlRule);
-                                const pdfLink = item.pdf
-                                    ? ` <a href="${item.pdf}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; font-weight: bold; color: rgba(0, 0, 0, 1);">[PDF]</a>`
-                                    : '';
+                                const formattedText = formatManuscriptTitle(item.text, useEtAlRule, item.pdf);
 
-                                return `<p style="margin-bottom: -12px;"><span style="color: rgb(213, 79, 21);">[${index + 1}]</span> ${formattedText}${pdfLink}</p>`;
+                                return `<p style="margin-bottom: -12px;"><span style="color: darkgreen;">[${index + 1}]</span> ${formattedText}</p>`;
                             })
                             .join('');
 
-                        return `<h3 style="color: rgb(213, 79, 21); margin-top: 28px; margin-bottom: 12px;">${year}</h3>${yearItems}`;
+                        return `<h3 style="color: darkgreen; margin-top: 28px; margin-bottom: 12px;">${year}</h3>${yearItems}`;
                     })
                     .join('')}`;
             };
 
-            journalContainer.innerHTML = renderGroupedList(publications, 'Journal Publications', true, false);
+            journalContainer.innerHTML = renderGroupedList(publications, 'Journal Publications', false, false);
             conferenceContainer.innerHTML = renderGroupedList(conferencePublications, 'Conference Publications', false, true);
         } catch (error) {
             journalContainer.innerHTML = '<p>Unable to load publications automatically. Please try again.</p>';
