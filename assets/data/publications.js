@@ -1,10 +1,10 @@
 window.PUBLICATIONS_DATA = [
   {
-    text: "<strong>Nguyen K</strong>, Park HC. Scaling-Based Design Approach for Tailbeat Fish-Inspired Robots Swimming at High Speed and Propulsive Efficiency.",
+    text: "<strong>Nguyen K</strong>, Park HC. Scaling-Based Design Approach for Tailbeat Fish-Inspired Robots Swimming at High Speed and Propulsive Efficiency. Under review.",
     pdf: ""
   },
   {
-    text: "Ha G, <strong>Nguyen K</strong>, Yu J, Kang T, Park HC. Can flapping wings keep lift coefficient unchanged at takeoff under extremely low air density?",
+    text: "Ha G, <strong>Nguyen K</strong>, Yu J, Kang T, Park HC. Can flapping wings keep lift coefficient unchanged at takeoff under extremely low air density? Under review.",
     pdf: ""
   },
   {
