@@ -1,6 +1,7 @@
 /* Apply the font to the entire webpage  <img src="assets/images/F2_Gliding_fish.jpg" alt="Profile Photo" style="height: auto; max-height: 155px; border-radius: 0%;"> */
 h1, h2, h3, h4, h5, h6, p, a, li {
     font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
     margin: 0px;
     margin-bottom: 20px;
     padding: 0.2;
@@ -8,6 +9,25 @@ h1, h2, h3, h4, h5, h6, p, a, li {
     color: #000; /* Default text color */
     zoom: 100%;
     text-decoration: none; /* Removes underline */
+}
+
+:root {
+    --content-width: 85%;
+    --content-max-width: 1200px;
+}
+
+/* Container styling */
+.Sitename {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.0em;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    text-align: center;
+    padding-left: 0;
+    width: 100%;
+    color: rgb(250, 246, 246);
 }
 
 body {
@@ -46,9 +66,22 @@ header h1, header p {
     color: darkgreen;
 }
 
+nav {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 0;
+    width: var(--content-width);
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Section styling */
 section {
     margin-bottom: 0px;
+
 }
 
 section h2 {
@@ -61,10 +94,26 @@ section h2 {
 
 /* Container styling */
 .container {
+    width: 95%;            /* Wider on mobile */
     max-width: 1200px;
     margin: 0 auto;
     padding: 10px;
 }
+
+
+@media (min-width: 768px) {
+    .container {
+        width: 90%;        /* Slightly narrower on tablet/desktop */
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 85%;        /* Even narrower on larger screens */
+    }
+}
+
+
 
 .italic {
     font-size: 0.9em;
@@ -100,12 +149,15 @@ footer {
 
 /* Two-column layout for page sections */
 .column-layout {
+
     display: grid;
-    grid-template-columns: 690px 500px; /* DO NOT TOUCH */
+    grid-template-columns: 1fr 0.58fr;  /* Responsive columns */
     gap: 0px;
     margin-bottom: 20px;
-    margin-left: 325px; /* DO NOT TOUCH */
-    margin-right: 325px;/* DO NOT TOUCH */
+    width: var(--content-width);
+    max-width: var(--content-max-width);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .main-column {
@@ -116,8 +168,8 @@ footer {
 }
 
 .sidebar-column {
-    margin-left: 50px; /* DO NOT TOUCH */
-    margin-right: 150px;/* DO NOT TOUCH */
+    margin-left: 50px;
+    margin-right: 0px;
     background-color: #ffffff00;
     padding: 0px;
     border-radius: 0px;
@@ -131,36 +183,43 @@ footer {
     padding: 0px; /* Add padding inside the div */
     border-radius: 0px; /* Optional: Add rounded corners */
 }
-/* Container styling */
-.Sitename {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2.0em;
-    font-style: normal;
-    font-weight: normal;
-    margin-top: 20px;
-    margin-left: 325px;
-    color: rgb(250, 246, 246);
-}
+
 
 .btn {
   color: rgb(250, 246, 246) !important;
   cursor: pointer; /* Hand cursor on hover */
-  margin-left: 0px; /* Left margin only for first button */
+    margin-left: 0;
   background-color: transparent; /* Blue background */
-  padding: 10px 10px; /* Spacing inside */
+    width: 100%;
+    min-width: 0;
+    padding: 0;
   border: none; /* Remove border */
-  border-radius: 0px; /* Rounded corners */
-  font-size: 14px; /* Text size */
+    border-radius: 0px; /* Rounded corners */
+    font-size: clamp(0.75rem, 0.95vw, 0.95rem); /* Text size */
+    text-align: center;
+    white-space: nowrap;
 }
 .btn:hover {
   color: rgb(250, 246, 246) !important;
   background-color: rgba(255, 255, 255, 0.3); /* Blue background */
   cursor: pointer; /* Hand cursor on hover */
-  margin-left: 0px; /* Left margin only for first button */
-  padding: 10px 10px; /* Spacing inside */
+    margin-left: 0;
+    width: 100%;
+    min-width: 0;
+    padding: 0;
   border: none; /* Remove border */
   border-radius: 0px; /* Rounded corners */
-  font-size: 14px; /* Text size */
+    font-size: clamp(0.75rem, 0.95vw, 0.95rem); /* Text size */
+    text-align: center;
+    white-space: nowrap;
+}
+
+nav .btn a {
+        display: block;
+        width: 100%;
+        padding: clamp(0.55rem, 1vw, 0.8rem) 0.5rem;
+        box-sizing: border-box;
+        text-align: center;
 }
 
 
@@ -168,9 +227,54 @@ hr {
   border: none;
   height: 1px;
   background-color: #ffffff;
-  margin: 10px 262px;
-  margin-left: 325px;
+  margin: 10px auto;
+    width: var(--content-width);
+    max-width: var(--content-max-width);
   margin-bottom: 0px;
+}
+
+/* Responsive section styling */
+.responsive-section {
+        width: var(--content-width);
+        max-width: var(--content-max-width);
+    margin: 50px auto;
+    margin-bottom: 50px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1024px) {
+        :root {
+                --content-width: 90%;
+        }
+
+    .column-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar-column {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 30px;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    :root {
+        --content-width: 95%;
+    }
+
+    .column-layout {
+    }
+
+    nav {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 0;
+    }
+    
+    .Sitename {
+        font-size: 1.5em;
+    }
 }
 
 
