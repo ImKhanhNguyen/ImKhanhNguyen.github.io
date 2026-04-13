@@ -26,15 +26,16 @@ h1, h2, h3, h4, h5, h6, p, a, li {
     margin-bottom: 12px;
     text-align: left;
     padding-left: 0;
-    width: auto;
+
     color: rgb(250, 246, 246);
     grid-column: 1;
     justify-self: start;
+    
 }
 
 .brand-row { /* Container for the site name and logo */
-    width: var(--content-width);
-    max-width: var(--content-max-width);
+    width: calc(var(--content-width) * 0.8);
+    max-width: calc(var(--content-max-width) * 0.8);
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr auto;
@@ -93,8 +94,9 @@ nav { /* Length of the buttons */
     grid-template-columns: repeat(4, minmax(0, 1fr));
     align-items: stretch;
     gap: 0;
-    width: var(--content-width);
-    max-width: var(--content-max-width);
+    /* total length of the buttons = 80% of the container width */
+    width: calc(var(--content-width) * 0.8);
+    max-width: calc(var(--content-max-width) * 0.8);
     margin: 0px auto;
 
     padding:0px;
@@ -175,13 +177,12 @@ footer {
 /* Two-column layout for page sections */
 .column-layout {
     display: grid;
-    grid-template-columns: 1fr 0.58fr;  /* Responsive columns */
-    gap: 0px;
-    margin-bottom: 20px;
+    grid-template-columns: 0.5fr 0.3fr;  /* Responsive columns */
+    gap: 50px;
+    margin: 0 auto 20px auto;
     width: var(--content-width);
     max-width: var(--content-max-width);
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: center;
 }
 
 .main-column {
@@ -192,7 +193,7 @@ footer {
 }
 
 .sidebar-column {
-    margin-left: 50px;
+    margin-left: 0px;
     margin-right: 0px;
     background-color: #ffffff00;
     padding: 0px;
@@ -201,6 +202,14 @@ footer {
 
 .custom-background {
     background-color: darkgreen; /* Light blue background color */
+    width: 100%; /* Set the width to 80% of the parent container */
+    height: fit-content;/* Ends exactly at the bottom of the nav buttons */
+    margin: 0px 0px; /* Center the div horizontally */
+    padding: 0px; /* Add padding inside the div */
+    border-radius: 0px; /* Optional: Add rounded corners */
+}
+.project-background {
+    background-color: rgb(209, 241, 217); /* Light green background color */
     width: 100%; /* Set the width to 80% of the parent container */
     height: fit-content;/* Ends exactly at the bottom of the nav buttons */
     margin: 0px 0px; /* Center the div horizontally */
@@ -217,14 +226,14 @@ footer {
 }
 
 .bottom-info {
-    width: var(--content-width);
-    max-width: var(--content-max-width);
+    width: calc(var(--content-width) * 0.8);
+    max-width: calc(var(--content-max-width) * 0.8);
     margin: 0;
 }
 
 .bottom-meta {
-    width: var(--content-width);
-    max-width: var(--content-max-width);
+    width: calc(var(--content-width) * 0.8);
+    max-width: calc(var(--content-max-width) * 0.8);
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -319,15 +328,15 @@ hr {
   height: 1px;
   background-color: #ffffff;
   margin: 10px auto;
-    width: var(--content-width);
-    max-width: var(--content-max-width);
+    width: calc(var(--content-width) * 0.8);
+    max-width: calc(var(--content-max-width) * 0.8);
   margin-bottom: 0px;
 }
 
 /* Responsive section styling */
 .responsive-section {
-        width: var(--content-width);
-        max-width: var(--content-max-width);
+    width: calc(var(--content-width) * 0.8);
+    max-width: calc(var(--content-max-width) * 0.8);
     margin: 50px auto;
     margin-bottom: 50px;
 }
