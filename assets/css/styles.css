@@ -223,6 +223,7 @@ footer {
     margin: 0px auto; /* Center the div horizontally */
     padding: 0px auto; /* Add padding inside the div */
     border-radius: 0px; /* Optional: Add rounded corners */
+    margin-top: 20px; /* Optional: Add rounded corners */
 }
 
 .custom-background-end {
@@ -326,6 +327,21 @@ nav .btn a {
      border-radius: 0px; /* Optional: Add rounded corners */
 }
 
+.inline-btn,
+.inline-btn:hover {
+    width: auto;
+    min-width: fit-content;
+    font-size: clamp(0.95rem, 3.4vw, 1.1rem);
+    background-color: transparent;
+}
+
+.inline-btn a,
+.inline-btn:hover a {
+    display: inline-block;
+    padding: 0.35em 0.55em;
+    line-height: 1.2;
+}
+
 .research-hero-image {
     display: block;
     margin: 0 auto;
@@ -402,7 +418,7 @@ hr {
     }
 
     .Sitename {
-        margin-bottom: 10px;
+        margin-bottom: 8px;
     }
 
     .bottom-meta {
