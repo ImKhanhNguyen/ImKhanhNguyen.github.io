@@ -1,6 +1,6 @@
 /* Apply the font to the entire webpage  <img src="assets/images/F2_Gliding_fish.jpg" alt="Profile Photo" style="height: auto; max-height: 155px; border-radius: 0%;"> */
 h1, h2, h3, h4, h5, h6, p, a, li {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: left;
     margin: 0px;
     margin-bottom: 20px;
@@ -18,16 +18,40 @@ h1, h2, h3, h4, h5, h6, p, a, li {
 
 /* Container styling */
 .Sitename {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 2.0em;
     font-style: normal;
     font-weight: normal;
     margin-top: 20px;
     margin-bottom: 12px;
-    text-align: center;
+    text-align: left;
     padding-left: 0;
-    width: 100%;
+    width: auto;
     color: rgb(250, 246, 246);
+    grid-column: 1;
+    justify-self: start;
+}
+
+.brand-row { /* Container for the site name and logo */
+    width: var(--content-width);
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+.ku-logo-top {
+    height: 53px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(1) brightness(0.9) contrast(4);
+    mix-blend-mode: screen;
+
+    margin-top: 16px;
+    margin-bottom: 8px;
+    grid-column: 2;
+    justify-self: end;
 }
 
 body {
@@ -39,8 +63,6 @@ body {
     margin: 0; /* Removes default margin */
     padding: 0; /* Removes default padding */
 }
-
-
 
 /* Header styling */
 header {
@@ -66,15 +88,16 @@ header h1, header p {
     color: darkgreen;
 }
 
-nav {
+nav { /* Length of the buttons */
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     align-items: stretch;
     gap: 0;
     width: var(--content-width);
     max-width: var(--content-max-width);
-    margin: 0 auto;
-    padding: 0;
+    margin: 0px auto;
+
+    padding:0px;
     box-sizing: border-box;
 }
 
@@ -143,13 +166,14 @@ footer {
     color: #555;
 }
 
-.custom-background p, .custom-background a {
+.custom-background p, .custom-background a,
+.custom-background-end p, .custom-background-end a {
     background-color: transparent; /* Ensure no background color is applied to <p> */
+    height: fit-content;
 }
 
 /* Two-column layout for page sections */
 .column-layout {
-
     display: grid;
     grid-template-columns: 1fr 0.58fr;  /* Responsive columns */
     gap: 0px;
@@ -178,10 +202,52 @@ footer {
 .custom-background {
     background-color: darkgreen; /* Light blue background color */
     width: 100%; /* Set the width to 80% of the parent container */
-    height: 113px;
+    height: fit-content;/* Ends exactly at the bottom of the nav buttons */
     margin: 0px 0px; /* Center the div horizontally */
     padding: 0px; /* Add padding inside the div */
     border-radius: 0px; /* Optional: Add rounded corners */
+}
+
+.custom-background-end {
+    background-color: rgb(55, 70, 80);
+    width: 100%;
+    height: fit-content;/* Ends exactly at the bottom of the nav buttons */
+    margin: 40px 0 0 0;
+    padding: 0 0 14px 0;
+}
+
+.bottom-info {
+    width: var(--content-width);
+    max-width: var(--content-max-width);
+    margin: 0;
+}
+
+.bottom-meta {
+    width: var(--content-width);
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    column-gap: 18px;
+}
+
+.ku-logo-bottom {
+    height: 53px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(1) brightness(0.9) contrast(4);
+    mix-blend-mode: screen;
+    margin-top: 2px;
+}
+
+.bottom-info p {
+    color: rgb(250, 246, 246);
+    text-align: right;
+    margin-bottom: 4px;
+    line-height: 1.35;
+    font-size: 0.9em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 
@@ -191,6 +257,7 @@ footer {
     margin-left: 0;
   background-color: transparent; /* Blue background */
     width: 100%;
+
     min-width: 0;
     padding: 0;
   border: none; /* Remove border */
@@ -198,6 +265,7 @@ footer {
     font-size: clamp(0.75rem, 0.95vw, 0.95rem); /* Text  size */
     text-align: center;
     white-space: nowrap;
+    
 }
 .btn:hover {
   color: rgb(250, 246, 246) !important;
@@ -215,11 +283,34 @@ footer {
 }
 
 nav .btn a {
-        display: block;
-        width: 100%;
-        padding: clamp(0.55rem, 1vw, 0.8rem) 0.5rem;
-        box-sizing: border-box;
-        text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.6em 0.1em; /* Same tab height for top and bottom nav */
+    margin: 0;
+    line-height: 1.1;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.custom-background-end .btn:hover {
+    background-color: transparent;
+}
+
+.custom-background-end .btn,
+.custom-background-end .btn:hover {
+    font-size: inherit;
+    background-color: transparent !important;
+}
+
+.custom-background-end .btn a,
+.custom-background-end .btn:hover a {
+    color: rgb(250, 246, 246) !important;
+}
+
+.custom-background-end hr {
+    margin-top: 0;
 }
 
 
@@ -264,17 +355,40 @@ hr {
         --content-width: 95%;
     }
 
+    .brand-row {
+        column-gap: 10px;
+    }
+
+    .ku-logo-top {
+        height: 10px;
+        margin-top: 14px;
+        margin-bottom: 7px;
+    }
+
+    .Sitename {
+        font-size: 1.5em;
+      
+        margin-bottom: 10px;
+   
+    }
+
+    .bottom-meta {
+        align-items: center;
+    }
+
+    .ku-logo-bottom {
+        height: 39px;
+    }
+
     .column-layout {
     }
 
     nav {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         padding: 0;
+        
     }
     
-    .Sitename {
-        font-size: 1.5em;
-    }
 }
 
 
