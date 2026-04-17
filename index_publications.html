@@ -31,7 +31,7 @@
 <button class="btn"><a style="color: rgb(250, 246, 246);"href="index_research.html">RESEARCH</a></button>
 
 <button class="btn" style="background-color: white;"> 
-<a style="color: darkgreen;">PUBLICATIONS</a></button>
+<a style="color: rgb(18, 169, 18);">PUBLICATIONS</a></button>
 
 <button class="btn"><a style="color: rgb(250, 246, 246);" href="index_news.html">NEWS</a></button>
 
@@ -100,8 +100,8 @@
                 const manuscriptTitle = titleMatch[1];
                 const remaining = rest.slice(manuscriptTitle.length);
                 const linkedTitle = manuscriptUrl
-                    ? `<a href="${manuscriptUrl}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;"><u style="color: darkgreen;">${manuscriptTitle}</u></a>`
-                    : `<u style="color: darkgreen;">${manuscriptTitle}</u>`;
+                    ? `<a href="${manuscriptUrl}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;"><u style="color: rgb(18, 169, 18);">${manuscriptTitle}</u></a>`
+                    : `<u style="color: rgb(18, 169, 18);">${manuscriptTitle}</u>`;
 
                 return `${formattedAuthorsPart}${linkedTitle}${remaining}`;
             };
@@ -134,7 +134,7 @@
                         })
                         .join('');
 
-                    return `<h2 style="color: darkgreen; margin-top: 20px; margin-bottom: 14px;">${title}</h2>${flatItems}`;
+                    return `<h2 style="color: rgb(18, 169, 18); margin-top: 20px; margin-bottom: 14px;">${title}</h2>${flatItems}`;
                 }
 
                 const groupedPublications = items.reduce((groups, item) => {
@@ -144,17 +144,17 @@
                     return groups;
                 }, {});
 
-                return `<h2 style="color: darkgreen; margin-top: 20px; margin-bottom: 14px;">${title}</h2>${orderYears(groupedPublications)
+                return `<h2 style="color: rgb(18, 169, 18); margin-top: 20px; margin-bottom: 14px;">${title}</h2>${orderYears(groupedPublications)
                     .map((year) => {
                         const yearItems = groupedPublications[year]
                             .map((item, index) => {
                                 const formattedText = formatManuscriptTitle(item.text, useEtAlRule, item.pdf);
 
-                                return `<p style="margin-bottom: -12px;"><span style="color: darkgreen;">[${index + 1}]</span> ${formattedText}</p>`;
+                                return `<p style="margin-bottom: -12px;"><span style="color: rgb(18, 169, 18);">[${index + 1}]</span> ${formattedText}</p>`;
                             })
                             .join('');
 
-                        return `<h3 style="color: darkgreen; margin-top: 28px; margin-bottom: 12px;">${year}</h3>${yearItems}`;
+                        return `<h3 style="color: rgb(18, 169, 18); margin-top: 28px; margin-bottom: 12px;">${year}</h3>${yearItems}`;
                     })
                     .join('')}`;
             };
