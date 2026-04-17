@@ -331,7 +331,7 @@ nav .btn a {
 .inline-btn:hover {
     width: auto;
     min-width: fit-content;
-    font-size: clamp(0.95rem, 3.4vw, 1.1rem);
+    font-size: calc(var(--sitename-size) * 0.5);
     background-color: transparent;
 }
 
