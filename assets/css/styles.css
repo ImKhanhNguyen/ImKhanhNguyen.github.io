@@ -115,11 +115,11 @@ section {
 }
 
 section h2 {
-    font-size: 2em;
+    font-size: 1.8em;
     font-style: normal;
     font-weight: normal;
     margin-left: 0px;
-    color: darkgreen;
+    color: rgb(0, 150, 0);
 }
 
 /* Container styling */
