@@ -159,8 +159,8 @@
                     .join('')}`;
             };
 
-            journalContainer.innerHTML = renderGroupedList(publications, 'Journal Publications', false, false);
-            conferenceContainer.innerHTML = renderGroupedList(conferencePublications, 'Conference Publications', false, true);
+            journalContainer.innerHTML = renderGroupedList(publications, '<h2>Journal Publications</h2>', false, false);
+            conferenceContainer.innerHTML = renderGroupedList(conferencePublications, '<h2>Conference Publications</h2>', false, true);
         } catch (error) {
             journalContainer.innerHTML = '<p>Unable to load publications automatically. Please try again.</p>';
             conferenceContainer.innerHTML = '';
