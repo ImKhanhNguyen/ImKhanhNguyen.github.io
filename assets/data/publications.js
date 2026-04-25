@@ -9,31 +9,31 @@ window.PUBLICATIONS_DATA = [
   },
   {
     text: "Le THH, <strong>Nguyen K</strong>, Vuong THN. Numerical analysis for aerodynamic characteristics of the unmanned aerial vehicle (UAV) in forward flight. J. Aeronaut. Astronaut. Aviat. 1081 2024. (JCR 2024, Q3, IF = 1.1, Rank: 40/55 in Eng., Aerospace, Main contributor)",
-    pdf: "assets/docs/papers/2nd_author_JAAA_2024_Forward_flight_of_3D_UAV_model (main contributor).pdf"
+    pdf: "assets/docs/Paper/2nd_author_JAAA_2024_Forward_flight_of_3D_UAV_model (main contributor).pdf"
   },
   {
     text: "<strong>Nguyen K</strong>, Ha G, Kang T, Park HC. Analysis of hovering flight stability of an insect-like flapping-wing robot in Martian condition. Aerosp. Sci. Technol. 152 109371 2024. (JCR 2024, Q1, IF = 5.8, Rank: 6/55, Top 11% in Eng., Aerospace)",
-    pdf: "assets/docs/papers/1st_author_AST_2024_Stability_Analysis_on_Mars.pdf"
+    pdf: "assets/docs/Paper/1st_author_AST_2024_Stability_Analysis_on_Mars.pdf"
   },
   {
     text: "<strong>Nguyen K</strong>, Park HC. Feasibility study on mimicking the tail-beating supported gliding flight of flying fish. Ocean Eng. 287 115745 2023. (JCR 2023, Q1, IF = 4.6, Rank: 2/25, Top 8% in Eng., Marine, Rank: 4/65, 6% in Eng., Oceanography)",
-    pdf: "assets/docs/papers/1st_author_OE_2023_Feasibility_of_flying_fish_like_gliding.pdf"
+    pdf: "assets/docs/Paper/1st_author_OE_2023_Feasibility_of_flying_fish_like_gliding.pdf"
   },
   {
     text: "Pham TH, <strong>Nguyen K</strong>, Park HC. A robotic fish capable of fast underwater swimming and water leaping with high Froude number. Ocean Eng. 268 113512 2023. (JCR 2023, Q1, IF = 4.6, Rank: 2/25, Top 8% in Eng., Marine, Rank: 4/65, 6% in Eng., Oceanography)",
-    pdf: "assets/docs/papers/2nd_author_OE_2023_Leaping_robotic_fish.pdf"
+    pdf: "assets/docs/Paper/2nd_author_OE_2023_Leaping_robotic_fish.pdf"
   },
   {
     text: "<strong>Nguyen K</strong>, Au LTK, Phan HV, Park HC. Comparative dynamic flight stability of insect-inspired flapping-wing micro air vehicles in hover: Longitudinal and lateral motions. Aerosp. Sci. Technol. 119 107085 2021. (JCR 2021, Q1, IF = 5.5, Rank: 2/34, Top 6% in Eng., Aerospace)",
-    pdf: "assets/docs/papers/1st_author_AST_2021_Stability_Analysis.pdf"
+    pdf: "assets/docs/Paper/1st_AST_2021_Stability.pdf"
   },
   {
     text: "<strong>Nguyen K</strong> et al. Effects of wing kinematics, corrugation, and clap-and-fling on aerodynamic efficiency of a hovering insect-inspired flapping-wing micro air vehicle. Aerosp. Sci. Technol. 2021. (JCR 2021, Q1, IF = 5.5, Rank: 2/34, Top 6% in Eng., Aerospace)",
-    pdf: "assets/docs/papers/1st_author_AST_2021_Aerodynamic_enhancement.pdf"
+    pdf: "assets/docs/Paper/1st_AST_2021_Aerodynamics.pdf"
   },
   {
     text: "Tran DKK, <strong>Nguyen K</strong>, Le THH, Nguyen NH. Numerical simulation for the forward flight of the tri-copter using virtual blade model. J. Adv. Res. Fluid Mech. Therm. Sci. 67 1 1-32 2020. (SJR Q3, IF = 0.3)",
-    pdf: "assets/docs/papers/2nd_author_JARFMTS_2020_Forward_flight_of_tricopter.pdf"
+    pdf: "assets/docs/Paper/2nd_author_JARFMTS_2020_Forward_flight_of_tricopter.pdf"
   }
 ];
 
