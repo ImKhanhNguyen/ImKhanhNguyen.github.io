@@ -94,6 +94,12 @@ window.Conference_PUBLICATIONS_DATA = [
     text: "Tran DKK, <strong>Nguyen K</strong>, Le THH. Numerical simulation for the forward flight of the tri-copter using Virtual Blade Model. SAWAE, Malaysia, 2019.",
     pdf: ""
   },
+
+ {
+    text: "Ngo TL , Hoang DT, Nguyen TAK, <strong>Nguyen K</strong>, Nguyen MD, Pham HT, Le THH, Nguyen NH. HOPE – A novel UAV design suitable for efficient VTOL and cruising missionsmissions. ICIUS, Beijing, China, 2019.",
+    pdf: ""
+  },
+
   {
     text: "<strong>Nguyen K</strong>, Nguyen NH, Le THH. Numerical approach for the vertical take-off and landing UAVs using the virtual blade model. SAWAE, Thailand, 2018. (Presenter)",
     pdf: ""
