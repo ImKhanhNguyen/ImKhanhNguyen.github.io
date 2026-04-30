@@ -13,10 +13,10 @@ h1, h2, h3, h4, h5, h6, p, a, li {
 
 :root {
     --content-width: 85%;
-    --content-max-width: 1200px;
+    --content-max-width: 1000px;
     --layout-width: calc(var(--content-width) * 0.9);
     --layout-max-width: calc(var(--content-max-width) * 0.9);
-    --sitename-size: 2em;
+    --sitename-size: 1.8em;
     --ku-logo-size: 53px;
 }
 
@@ -101,8 +101,8 @@ nav { /* Length of the buttons */
     align-items: stretch;
     gap: 0;
     /* total length of the buttons = 80% of the container width */
-    width: calc(var(--layout-width) * 0.9);
-    max-width: calc(var(--layout-max-width) * 0.9);
+    width: calc(var(--layout-width) * 0.7);
+    max-width: calc(var(--layout-max-width) * 0.7);
     margin: 0px auto;
 
     padding:0px;
@@ -274,7 +274,7 @@ footer {
 .btn {
   color: rgb(250, 246, 246) !important;
   cursor: pointer; /* Hand cursor on hover */
-    margin-left: 0;
+  margin-left: 0;
   background-color: transparent; /* Blue background */
     width: 100%;
 
@@ -285,7 +285,7 @@ footer {
     font-size: calc(var(--sitename-size) * 0.5);
     text-align: center;
     white-space: nowrap;
-          border-radius: 0px; /* Optional: Add rounded corners */
+border-radius: 0px; /* Optional: Add rounded corners */
 }
 .btn:hover {
   color: rgb(250, 246, 246) !important;
@@ -305,7 +305,7 @@ footer {
 
 nav .btn a {
     display: flex;
-    align-items: center;
+    align-items: left;
     justify-content: center;
     width: 100%;
     padding: 0.6em 0.1em; /* Same tab height for top and bottom nav */
@@ -313,7 +313,7 @@ nav .btn a {
     line-height: 1.1;
     box-sizing: border-box;
     text-align: center;
-        border-radius: 0px; /* Optional: Add rounded corners */
+    border-radius: 0px; /* Optional: Add rounded corners */
 }
 
 .custom-background-end .btn:hover {
