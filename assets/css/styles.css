@@ -345,7 +345,8 @@ nav .btn a {
 .research-hero-image {
     display: block;
     margin: 0 auto;
-    max-width: 100%;
+    width: calc(var(--layout-width) * 0.9);
+    max-width: calc(var(--layout-max-width) * 0.9);
     height: auto;
     border-radius: 0px; /* Optional: Add rounded corners */
 }
