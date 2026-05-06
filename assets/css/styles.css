@@ -26,16 +26,27 @@ h1, h2, h3, h4, h5, h6, p, a, li {
     font-size: var(--sitename-size);
     font-style: normal;
     font-weight: normal;
-    margin-top: 20px;
-    margin-bottom: 12px;
-    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    text-align: center;
     padding-left: 0;
-    width: calc(var(--layout-width) * 0.9);
-    max-width: calc(var(--layout-max-width) * 0.9);
+
     color: rgb(250, 246, 246);
     grid-column: 1;
     justify-self: start;
+}
+
+.profile-pic {
+    height: auto;
+    width: calc(var(--layout-width) * 1);
+    max-width: calc(var(--layout-max-width) *1);
+    object-fit: contain;
     
+    mix-blend-mode: screen;
+    margin-left: 0px;
+    margin-top: 25px;
+    margin-bottom: 0px;
+
 }
 
 .brand-row { /* Container for the site name and logo */
@@ -190,7 +201,6 @@ footer {
     max-width: var(--layout-max-width);
     justify-content: center;
 }
-
 .main-column {
     background-color: #ffffff00;
     padding: 0px;
@@ -199,11 +209,40 @@ footer {
 }
 
 .sidebar-column {
-    margin-left: 40px;
+    margin-left: 30px;
     margin-right: 0px;
     background-color: #ffffff00;
     padding: 0px;
     border-radius: 0px;
+
+}
+
+/* Two-column layout for page sections */
+.column-layout-profile-pic {
+    display: grid;
+    grid-template-columns: 0.35fr 0.55fr;  /* Responsive columns */
+    gap: 0px;
+    margin: 0 auto 10px auto;
+    width: var(--layout-width);
+    max-width: var(--layout-max-width);
+    justify-content: center;
+}
+
+
+.main-column-pic {
+    background-color: #ffffff00;
+    padding: 0px;
+    border-radius: 0px;
+    margin-left: 0px;/* DO NOT TOUCH */
+}
+
+.sidebar-column-pic {
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: #ffffff00;
+    padding: 0px;
+    border-radius: 0px;
+
 }
 
 .custom-background {
