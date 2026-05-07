@@ -37,6 +37,8 @@ h1, h2, h3, h4, h5, h6, p, a, li {
 }
 
 .profile-pic {
+    display: block;
+    margin: 0 auto;
     height: auto;
     width: calc(var(--layout-width) * 1);
     max-width: calc(var(--layout-max-width) *1);
@@ -46,6 +48,8 @@ h1, h2, h3, h4, h5, h6, p, a, li {
     margin-left: 0px;
     margin-top: 25px;
     margin-bottom: 0px;
+
+    border-radius: 0px; /* Optional: Add rounded corners */
 
 }
 
@@ -237,7 +241,7 @@ footer {
 }
 
 .sidebar-column-pic {
-    margin-left: 0px;
+    margin-left: -10px;
     margin-right: 0px;
     background-color: #ffffff00;
     padding: 0px;
