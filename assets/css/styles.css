@@ -544,7 +544,7 @@ hr {
 
     .subtitle p {
         display: inline-block;
-        font-size: calc(var(--sitename-size) * 0.8);
+        font-size: calc(var(--sitename-size) * 0.6);
         margin: 0;
     }
     .btn {
