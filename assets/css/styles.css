@@ -38,7 +38,8 @@ h1, h2, h3, h4, h5, h6, p, a, li {
 
 .logo-section {
     display: flex;
-    align-items: center;
+    align-items: baseline;
+    flex-wrap: nowrap;
     gap: 20px;
     margin-top: 20px;
     grid-column: 1;
@@ -51,6 +52,14 @@ h1, h2, h3, h4, h5, h6, p, a, li {
     margin: 0;
     padding: 0;
     font-weight: normal;
+    white-space: nowrap;
+}
+
+.subtitle {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.4em;
+    white-space: nowrap;
 }
 
 .subtitle p {
@@ -514,12 +523,30 @@ hr {
         margin-bottom: 8px;
     }
 
+    .logo-section {
+        flex-wrap: nowrap;
+        align-items: baseline;
+        gap: 8px;
+        white-space: nowrap;
+    }
+
     .narom {
         font-size: calc(var(--sitename-size) * 1.8);
+        white-space: nowrap;
+        margin: 0;
     }
-    .subtitle p {
-        font-size: calc(var(--sitename-size) * 0.5);
 
+    .subtitle {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 0.4em;
+        white-space: nowrap;
+    }
+
+    .subtitle p {
+        display: inline-block;
+        font-size: calc(var(--sitename-size) * 0.5);
+        margin: 0;
     }
     .btn {
         font-size: calc(var(--sitename-size) * 0.6);
