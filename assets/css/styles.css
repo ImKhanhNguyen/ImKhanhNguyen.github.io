@@ -506,7 +506,7 @@ hr {
 @media (max-width: 768px) {
     :root {
         --content-width: 95%;
-        --sitename-size: 1.2em;
+        --sitename-size: 1.4em;
         --ku-logo-size: clamp(34px, 8vw, 53px);
     }
 
@@ -545,7 +545,7 @@ hr {
 
     .subtitle p {
         display: inline-block;
-        font-size: calc(var(--sitename-size) * 0.5);
+        font-size: calc(var(--sitename-size) * 0.8);
         margin: 0;
     }
     .btn {
