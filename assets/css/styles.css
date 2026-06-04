@@ -141,9 +141,9 @@ nav { /* Length of the buttons */
     grid-template-columns: repeat(5, minmax(0, 1fr));
     align-items: stretch;
     gap: 0;
-    /* total length of the buttons = 80% of the container width */
-    width: calc(var(--layout-width) * 0.8);
-    max-width: calc(var(--layout-max-width) * 0.8);
+    /* total length of the buttons matches the hr width */
+    width: calc(var(--layout-width) * 0.9);
+    max-width: calc(var(--layout-max-width) * 0.9);
     margin: 0px auto;
 
     padding:0px;
@@ -161,6 +161,19 @@ section h2 {
     font-weight: normal;
     margin-left: 0px;
     color: #DC0F31;;
+}
+
+
+@media (max-width: 1024px) {
+    .responsive-section {
+        padding: 16px 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .responsive-section {
+        padding: 12px 6px;
+    }
 }
 
 /* Container styling */
@@ -402,6 +415,21 @@ nav .btn a {
 }
 
 
+.inline-btn,
+.inline-btn:hover {
+    width: auto;
+    min-width: fit-content;
+    font-size: calc(var(--sitename-size) * 0.5);
+    background-color: transparent;
+}
+
+.inline-btn a,
+.inline-btn:hover a {
+    display: inline-block;
+    padding: 0.35em 0.55em;
+    line-height: 1.2;
+}
+
 
 .research-hero-image {
     display: block;
@@ -436,6 +464,16 @@ hr {
 }
 
 
+/* Responsive section styling */
+.responsive-section {
+    width: calc(var(--layout-width) * 0.9);
+    max-width: calc(var(--layout-max-width) * 0.9);
+    margin: 50px auto;
+    margin-bottom: 50px;
+        border-radius: 0px; /* Optional: Add rounded corners */
+
+}
+
 
 /* Responsive design for smaller screens */
 @media (max-width: 1024px) {
@@ -458,7 +496,7 @@ hr {
 @media (max-width: 768px) {
     :root {
         --content-width: 95%;
-        --sitename-size: 0.8em;
+        --sitename-size: 1.2em;
         --ku-logo-size: clamp(34px, 8vw, 53px);
     }
 
@@ -476,7 +514,13 @@ hr {
     }
 
     .narom {
-        font-size: calc(var(--sitename-size) * 1.4);
+        font-size: calc(var(--sitename-size) * 1.65);
+    }
+    .subtitle p {
+        font-size: calc(var(--sitename-size) * 0.5);
+    }
+    .btn {
+        font-size: calc(var(--sitename-size) * 0.6);
     }
 
     .bottom-meta {
