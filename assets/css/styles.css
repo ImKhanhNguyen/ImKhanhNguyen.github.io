@@ -515,7 +515,7 @@ hr {
     }
 
     .narom {
-        font-size: calc(var(--sitename-size) * 1.6);
+        font-size: calc(var(--sitename-size) * 1.8);
     }
     .subtitle p {
         font-size: calc(var(--sitename-size) * 0.5);
