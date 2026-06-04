@@ -530,7 +530,7 @@ hr {
     }
 
     .narom {
-        font-size: calc(var(--sitename-size) * 1.8);
+        font-size: calc(var(--sitename-size) * 1.6);
         white-space: nowrap;
         margin: 0;
     }
