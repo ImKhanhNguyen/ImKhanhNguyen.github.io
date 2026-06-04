@@ -138,8 +138,9 @@ header h1, header p {
 nav { /* Length of the buttons */
     display: grid;
 
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     align-items: stretch;
+    justify-content: center;
     gap: 0;
     /* total length of the buttons matches the hr width */
     width: calc(var(--layout-width) * 0.9);
@@ -514,10 +515,10 @@ hr {
     }
 
     .narom {
-        font-size: calc(var(--sitename-size) * 1.65);
+        font-size: calc(var(--sitename-size) * 1.25);
     }
     .subtitle p {
-        font-size: calc(var(--sitename-size) * 0.5);
+        font-size: calc(var(--sitename-size) * 0.4);
     }
     .btn {
         font-size: calc(var(--sitename-size) * 0.6);
