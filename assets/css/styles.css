@@ -530,7 +530,7 @@ hr {
     }
 
     .narom {
-        font-size: calc(var(--sitename-size) * 1.6);
+        font-size: calc(var(--sitename-size) * 1.3);
         white-space: nowrap;
         margin: 0;
     }
@@ -544,14 +544,14 @@ hr {
 
     .subtitle p {
         display: inline-block;
-        font-size: calc(var(--sitename-size) * 0.6);
+        font-size: calc(var(--sitename-size) * 0.8);
         margin: 0;
     }
     .btn {
-        font-size: calc(var(--sitename-size) * 0.6);
+        font-size: calc(var(--sitename-size) * 0.8);
     }
     .inline-btn {
-        font-size: calc(var(--sitename-size) * 0.6);
+        font-size: calc(var(--sitename-size) * 0.8);
     }
 
     .bottom-meta {
