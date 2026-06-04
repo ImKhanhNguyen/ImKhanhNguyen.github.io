@@ -454,7 +454,7 @@ hr {
     max-width: calc(var(--layout-max-width) * 0.9);
     margin: 50px auto;
     margin-bottom: 50px;
-        border-radius: 0px; /* Optional: Add rounded corners */
+    border-radius: 0px; /* Optional: Add rounded corners */
 
 }
 
@@ -479,7 +479,7 @@ hr {
 @media (max-width: 768px) {
     :root {
         --content-width: 95%;
-        --sitename-size: 1.5em;
+        --sitename-size: 1.2em;
         --ku-logo-size: clamp(34px, 8vw, 53px);
     }
 
