@@ -548,10 +548,10 @@ hr {
         margin: 0;
     }
     .btn {
-        font-size: calc(var(--sitename-size) * 0.8);
+        font-size: calc(var(--sitename-size) * 0.6);
     }
     .inline-btn {
-        font-size: calc(var(--sitename-size) * 0.8);
+        font-size: calc(var(--sitename-size) * 0.6);
     }
 
     .bottom-meta {
