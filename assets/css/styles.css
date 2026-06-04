@@ -475,6 +475,10 @@ hr {
         margin-bottom: 8px;
     }
 
+    .narom {
+        font-size: calc(var(--sitename-size) * 1.4);
+    }
+
     .bottom-meta {
         align-items: center;
     }
