@@ -146,18 +146,20 @@ header h1, header p {
 
 nav { /* Length of the buttons */
     display: grid;
-
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(4, max-content);
     align-items: stretch;
-    justify-content: center;
+    justify-content: left;
     gap: 0;
     /* total length of the buttons matches the hr width */
     width: calc(var(--layout-width) * 0.9);
     max-width: calc(var(--layout-max-width) * 0.9);
     margin: 0px auto;
-
     padding:0px;
     box-sizing: border-box;
+}
+
+nav .btn {
+    width: fit-content;
 }
 
 /* Section styling */
@@ -304,6 +306,7 @@ footer {
     padding: 0px auto; /* Add padding inside the div */
     border-radius: 0px; /* Optional: Add rounded corners */
     margin-top: 20px; /* Optional: Add rounded corners */
+    font-size: calc(var(--sitename-size) * 0.6);
 }
 
 .custom-background-end {
@@ -358,7 +361,7 @@ footer {
 }
 
 .btn {
-  color: rgb(255, 98, 98) !important;
+  color: rgb(0, 0, 0) !important;
   cursor: pointer; /* Hand cursor on hover */
   margin-left: 0;
   background-color: transparent; /* Blue background */
@@ -370,35 +373,33 @@ footer {
     font-size: calc(var(--sitename-size) * 0.5);
     text-align: center;
     white-space: nowrap;
+    text-decoration: underline; /* Remove underline from links */
 border-radius: 0px; /* Optional: Add rounded corners */
 }
 .btn:hover {
-  color: rgb(255, 98, 98) !important;
+  color: #dc0f31 !important;
   background-color: rgba(228, 228, 228, 0.491); /* Blue background */
   cursor: pointer; /* Hand cursor on hover */
     margin-left: 0;
-    width: 100%;
-    min-width: 0;
-    padding: 0;
-  border: none; /* Remove border */
-  border-radius: 0px; /* Rounded corners */
-    font-size: calc(var(--sitename-size) * 0.5);
+    width: fit-content;
     text-align: center;
     white-space: nowrap;
         border-radius: 0px; /* Optional: Add rounded corners */
+
 }
 
 nav .btn a {
-    display: flex;
-    align-items: left;
-    justify-content: center;
-    width: 100%;
-    padding: 0.6em 0.1em; /* Same tab height for top and bottom nav */
+    display: inline-flex;
+    align-items: center;
+    justify-content: left;
+    width: auto;
+    padding: 0.6em 1.2em; /* Approximate 1.2× text width by adding extra horizontal space */
     margin: 0;
     line-height: 1.1;
     box-sizing: border-box;
     text-align: center;
     border-radius: 0px; /* Optional: Add rounded corners */
+    
 }
 
 .custom-background-end .btn:hover {
@@ -419,13 +420,17 @@ nav .btn a {
     min-width: fit-content;
     font-size: calc(var(--sitename-size) * 0.5);
     background-color: transparent;
+    padding: 0em 0.55em;
+    white-space: nowrap;
+    display: inline-block;
 }
 
 .inline-btn a,
 .inline-btn:hover a {
     display: inline-block;
-    padding: 0.35em 0.55em;
-    line-height: 1.2;
+    padding: 0em 0.55em;
+    line-height: 1;
+    white-space: nowrap;
 }
 
 
