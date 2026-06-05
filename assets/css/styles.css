@@ -480,6 +480,7 @@ hr {
 @media (min-width: 768px) {
     .container {
         width: 90%;        /* Slightly narrower on tablet/desktop */
+
     }
 }
 
@@ -552,11 +553,15 @@ hr {
         font-size: calc(var(--sitename-size) * 0.6);
         margin: 0;
     }
-    .btn {
-        font-size: calc(var(--sitename-size) * 0.6);
-    }
-    .inline-btn {
-        font-size: calc(var(--sitename-size) * 0.6);
+    .btn,
+    .btn:hover,
+    .nav .btn a,
+    .nav .btn:hover a,
+    .inline-btn,
+    .inline-btn:hover,
+    .inline-btn a,
+    .inline-btn:hover a {
+      font-size: calc(var(--sitename-size) * 0.7);
     }
 
     .bottom-meta {
@@ -564,7 +569,7 @@ hr {
     }
 
     nav {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(3, max-content);
         padding: 0;
     }
     
