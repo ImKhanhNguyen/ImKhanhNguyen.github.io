@@ -75,8 +75,8 @@ h1, h2, h3, h4, h5, h6, p, a, li {
     display: block;
     margin: auto;
     height: auto;
-    width: calc(var(--layout-width)*0.5);
-    max-width: calc(var(--layout-max-width) *0.5);
+    width: calc(var(--layout-width)*0.45);
+    max-width: calc(var(--layout-max-width) *0.45);
     object-fit: contain;
     mix-blend-mode: screen;
     margin-left: 0px;
@@ -85,7 +85,7 @@ h1, h2, h3, h4, h5, h6, p, a, li {
     border-radius: 50%;
 }
 .sidebar-column-pic {
-    margin-left: -150px;
+    margin-left: -170px;
     margin-right: 0px;
     background-color: #ffffff00;
     padding: 0px;
@@ -542,8 +542,8 @@ hr {
     object-fit: cover;
     mix-blend-mode: screen;
     margin-left: 0px;
-    margin-top: 16px;
-    margin-bottom: 8px;
+    margin-top: 10px;
+    margin-bottom: -10px;
     border-radius: 50%;
 }
     .nairom {
