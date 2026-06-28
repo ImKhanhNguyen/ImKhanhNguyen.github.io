@@ -572,7 +572,7 @@ hr {
     .inline-btn:hover,
     .inline-btn a,
     .inline-btn:hover a {
-      font-size: calc(var(--sitename-size) * 0.65);
+      font-size: calc(var(--sitename-size) * 0.7);
     }
 
     .bottom-meta {
