@@ -1,107 +1,107 @@
 window.PUBLICATIONS_DATA = [
   {
-    text: "<strong>Nguyen K</strong>, Park HC. Scaling-Based Design Approach for Tailbeat Fish-Inspired Robots Swimming at High Speed and Propulsive Efficiency. Under review.",
+    text: "<strong>K Nguyen</strong>, HC Park. Scaling-Based Design Approach for Tailbeat Fish-Inspired Robots Swimming at High Speed and Propulsive Efficiency. Under review.",
     pdf: ""
   },
   {
-    text: "Ha G, <strong>Nguyen K</strong>, Yu J, Kang T, Park HC. Can flapping wings keep lift coefficient unchanged at takeoff under extremely low air density? Under review.",
-    pdf: ""
+    "text": "G Ha, <strong>K Nguyen</strong>, J Yu, T Kang, HC Park. Aerodynamic characteristics of flapping wings at takeoff under very low air density and low gravity. Acta Astronautica, 204 1223-1235,2026. (JCR 2026, Q1, IF = 3.9, Rank: 10/59, Top 17% in Eng., Aerospace)",
+    "pdf": ""
   },
   {
-    text: "Le THH, <strong>Nguyen K</strong>, Vuong THN. Numerical analysis for aerodynamic characteristics of the unmanned aerial vehicle (UAV) in forward flight. J. Aeronaut. Astronaut. Aviat. 1081 2024. (JCR 2024, Q3, IF = 1.1, Rank: 40/55 in Eng., Aerospace, Main contributor)",
+    text: "THH Le, <strong>K Nguyen</strong>, Vuong THN. Numerical analysis for aerodynamic characteristics of the unmanned aerial vehicle (UAV) in forward flight. J. Aeronaut. Astronaut. Aviat. 1081 2024. (JCR 2024, Q3, IF = 1.1, Rank: 40/55 in Eng., Aerospace, Main contributor)",
     pdf: "assets/docs/Paper/2nd_JAAA_2024_Forward.pdf"
   },
   {
-    text: "<strong>Nguyen K</strong>, Ha G, Kang T, Park HC. Analysis of hovering flight stability of an insect-like flapping-wing robot in Martian condition. Aerosp. Sci. Technol. 152 109371 2024. (JCR 2024, Q1, IF = 5.8, Rank: 6/55, Top 11% in Eng., Aerospace)",
+    text: "<strong>K Nguyen</strong>, G Ha, T Kang, HC Park. Analysis of hovering flight stability of an insect-like flapping-wing robot in Martian condition. Aerosp. Sci. Technol. 152 109371 2024. (JCR 2024, Q1, IF = 5.8, Rank: 6/55, Top 11% in Eng., Aerospace)",
     pdf: "assets/docs/Paper/1st_AST_2024_Stability.pdf"
   },
   {
-    text: "<strong>Nguyen K</strong>, Park HC. Feasibility study on mimicking the tail-beating supported gliding flight of flying fish. Ocean Eng. 287 115745 2023. (JCR 2023, Q1, IF = 4.6, Rank: 2/25, Top 8% in Eng., Marine, Rank: 4/65, 6% in Eng., Oceanography)",
+    text: "<strong>K Nguyen</strong>, HC Park. Feasibility study on mimicking the tail-beating supported gliding flight of flying fish. Ocean Eng. 287 115745 2023. (JCR 2023, Q1, IF = 4.6, Rank: 2/25, Top 8% in Eng., Marine, Rank: 4/65, 6% in Eng., Oceanography)",
     pdf: "assets/docs/Paper/1st_OE_2023_Gliding.pdf"
   },
   {
-    text: "Pham TH, <strong>Nguyen K</strong>, Park HC. A robotic fish capable of fast underwater swimming and water leaping with high Froude number. Ocean Eng. 268 113512 2023. (JCR 2023, Q1, IF = 4.6, Rank: 2/25, Top 8% in Eng., Marine, Rank: 4/65, 6% in Eng., Oceanography)",
+    text: "TH Pham, <strong>K Nguyen</strong>, HC Park. A robotic fish capable of fast underwater swimming and water leaping with high Froude number. Ocean Eng. 268 113512 2023. (JCR 2023, Q1, IF = 4.6, Rank: 2/25, Top 8% in Eng., Marine, Rank: 4/65, 6% in Eng., Oceanography)",
     pdf: "assets/docs/Paper/2nd_OE_2023_KUFish.pdf"
   },
   {
-    text: "<strong>Nguyen K</strong>, Au LTK, Phan HV, Park HC. Comparative dynamic flight stability of insect-inspired flapping-wing micro air vehicles in hover: Longitudinal and lateral motions. Aerosp. Sci. Technol. 119 107085 2021. (JCR 2021, Q1, IF = 5.5, Rank: 2/34, Top 6% in Eng., Aerospace)",
+    text: "<strong>K Nguyen</strong>, LTK Au, HV Phan, HC Park. Comparative dynamic flight stability of insect-inspired flapping-wing micro air vehicles in hover: Longitudinal and lateral motions. Aerosp. Sci. Technol. 119 107085 2021. (JCR 2021, Q1, IF = 5.5, Rank: 2/34, Top 6% in Eng., Aerospace)",
     pdf: "assets/docs/Paper/1st_AST_2021_Stability.pdf"
   },
   {
-    text: "<strong>Nguyen K</strong> et al. Effects of wing kinematics, corrugation, and clap-and-fling on aerodynamic efficiency of a hovering insect-inspired flapping-wing micro air vehicle. Aerosp. Sci. Technol. 2021. (JCR 2021, Q1, IF = 5.5, Rank: 2/34, Top 6% in Eng., Aerospace)",
+    text: "<strong>K Nguyen</strong> et al. Effects of wing kinematics, corrugation, and clap-and-fling on aerodynamic efficiency of a hovering insect-inspired flapping-wing micro air vehicle. Aerosp. Sci. Technol. 2021. (JCR 2021, Q1, IF = 5.5, Rank: 2/34, Top 6% in Eng., Aerospace)",
     pdf: "assets/docs/Paper/1st_AST_2021_Aerodynamics.pdf"
   },
   {
-    text: "Tran DKK, <strong>Nguyen K</strong>, Le THH, Nguyen NH. Numerical simulation for the forward flight of the tri-copter using virtual blade model. J. Adv. Res. Fluid Mech. Therm. Sci. 67 1 1-32 2020. (SJR Q3, IF = 0.3)",
+    text: "DKK Tran, <strong>K Nguyen</strong>, THH Le, NH Nguyen. Numerical simulation for the forward flight of the tri-copter using virtual blade model. J. Adv. Res. Fluid Mech. Therm. Sci. 67 1 1-32 2020. (SJR Q3, IF = 0.3)",
     pdf: "assets/docs/Paper/2nd_JARFMTS_2020_tricopter.pdf"
   }
 ];
 
 window.Conference_PUBLICATIONS_DATA = [
   {
-    text: "<strong>Nguyen K</strong>, Ha G, Park HC. Design and fabrication of high-thrust tail-beating mechanism for fish-inspired swimming robot. ICIUS, Indonesia, 2025. (Presenter & Best paper award)",
+    text: "<strong>K Nguyen</strong>, G Ha, HC Park. Design and fabrication of high-thrust tail-beating mechanism for fish-inspired swimming robot. ICIUS, Indonesia, 2025. (Presenter & Best paper award)",
     pdf: ""
   },
   {
-    text: "Ha G, <strong>Nguyen K</strong>, Park HC. A study on the takeoff of an insect-like flapping-wing system under low air density and low gravity conditions. Proceedings of KSAS, Korea, 2024. (Best paper award)",
+    text: "G Ha, <strong>K Nguyen</strong>, HC Park. A study on the takeoff of an insect-like flapping-wing system under low air density and low gravity conditions. Proceedings of KSAS, Korea, 2024. (Best paper award)",
     pdf: ""
   },
   {
-    text: "<strong>Nguyen K</strong>, Ha G, Park HC. Design and fabrication of high-thrust tail-beating mechanism for fish-inspired swimming robot. ICIUS, Indonesia, 2024. (Presenter)",
+    text: "<strong>K Nguyen</strong>, G Ha, HC Park. Design and fabrication of high-thrust tail-beating mechanism for fish-inspired swimming robot. ICIUS, Indonesia, 2024. (Presenter)",
     pdf: ""
   },
   {
-    text: "<strong>Nguyen K</strong>, Park HC. Analytical and experimental performance verifications of a fast-swimming robotic fish. ICIUS, Indonesia, 2024. (Presenter)",
+    text: "<strong>K Nguyen</strong>, HC Park. Analytical and experimental performance verifications of a fast-swimming robotic fish. ICIUS, Indonesia, 2024. (Presenter)",
     pdf: ""
   },
   {
-    text: "<strong>Nguyen K</strong>, Kang TS, Park HC. Hovering characteristics of an insect-like flapping-wing robot on Mars. Proceedings of KSAS, Korea, 2023. (Presenter)",
+    text: "<strong>K Nguyen</strong>, T Kang, HC Park. Hovering characteristics of an insect-like flapping-wing robot on Mars. Proceedings of KSAS, Korea, 2023. (Presenter)",
     pdf: ""
   },
   {
-    text: "<strong>Nguyen K</strong>, Ha G, Park HC. Preliminary design of a fish-like fast robot by scaling of the KUFish. ICIUS, AU, 2023.",
+    text: "<strong>K Nguyen</strong>, G Ha, HC Park. Preliminary design of a fish-like fast robot by scaling of the KUFish. ICIUS, AU, 2023.",
     pdf: ""
   },
   {
-    text: "<strong>Nguyen K</strong>, Park HC. Roles of hydrodynamic forces generated by tail-beating motion in gliding flight of flying-fish-mimicking robot. ICIUS, Adelaide, Australia, 2023. (Presenter)",
+    text: "<strong>K Nguyen</strong>, HC Park. Roles of hydrodynamic forces generated by tail-beating motion in gliding flight of flying-fish-mimicking robot. ICIUS, Adelaide, Australia, 2023. (Presenter)",
     pdf: ""
   },
   {
-    text: "<strong>Nguyen K</strong>, Pham TH, Park HC. Numerical investigation of hydrodynamics for a fish-like robot under undulatory forward swimming. Proceedings of the Korean Society of Mechanical Engineers Annual Meeting, Jeju, Korea, 2022. (Presenter)",
+    text: "<strong>K Nguyen</strong>, TH Pham, HC Park. Numerical investigation of hydrodynamics for a fish-like robot under undulatory forward swimming. Proceedings of the Korean Society of Mechanical Engineers Annual Meeting, Jeju, Korea, 2022. (Presenter)",
     pdf: ""
   },
   {
-    text: "Pham TH, <strong>Nguyen K</strong>, Park HC. Leaping out of water of the KUFish: Prediction and demonstration. ICIUS, Japan, 2022. (Best paper award)",
+    text: "TH Pham, <strong>K Nguyen</strong>, HC Park. Leaping out of water of the KUFish: Prediction and demonstration. ICIUS, Japan, 2022. (Best paper award)",
     pdf: ""
   },
   {
-    text: "<strong>Nguyen K</strong>, Pham TH, Park HC. Numerical estimation of hydrodynamic thrust using the measured tail-beating kinematics of a fish-like robot. ICIUS, Japan, 2022. (Presenter)",
+    text: "<strong>K Nguyen</strong>, TH Pham, HC Park. Numerical estimation of hydrodynamic thrust using the measured tail-beating kinematics of a fish-like robot. ICIUS, Japan, 2022. (Presenter)",
     pdf: ""
   },
   {
-    text: "<strong>Nguyen K</strong>, Au LTK, Phan HV, Park HC. Wing kinematics modulation in an insect-like tailless flapping wing micro air vehicle (FW-MAV) for higher aerodynamic efficiency. ICIUS, Vietnam, 2021. (Presenter)",
+    text: "<strong>K Nguyen</strong>, LTK Au, HV Phan, HC Park. Wing kinematics modulation in an insect-like tailless flapping wing micro air vehicle (FW-MAV) for higher aerodynamic efficiency. ICIUS, Vietnam, 2021. (Presenter)",
     pdf: ""
   },
   {
-    text: "<strong>Nguyen K</strong>, Au LTK, Park HC. Three-dimensional wing kinematics for improved aerodynamic performance of insect-like flapping-wing micro air vehicle. Proceedings of KSAS, Korea, 2020. (Presenter)",
+    text: "<strong>K Nguyen</strong>, LTK Au, HC Park. Three-dimensional wing kinematics for improved aerodynamic performance of insect-like flapping-wing micro air vehicle. Proceedings of KSAS, Korea, 2020. (Presenter)",
     pdf: ""
   },
   {
-    text: "Au LTK, <strong>Nguyen K</strong>, Park SH, Park HC. Effect of wing corrugation on aerodynamic performance in 3D flapping wings. Proceedings of KSAS, Korea, 2019. (Presenter)",
+    text: "LTK Au, <strong>K Nguyen</strong>, Park SH, HC Park. Effect of wing corrugation on aerodynamic performance in 3D flapping wings. Proceedings of KSAS, Korea, 2019. (Presenter)",
     pdf: ""
   },
   {
-    text: "Tran DKK, <strong>Nguyen K</strong>, Le THH. Numerical simulation for the forward flight of the tri-copter using Virtual Blade Model. SAWAE, Malaysia, 2019.",
+    text: "DKK Tran, <strong>K Nguyen</strong>, THH Le. Numerical simulation for the forward flight of the tri-copter using Virtual Blade Model. SAWAE, Malaysia, 2019.",
     pdf: ""
   },
 
  {
-    text: "Ngo TL , Hoang DT, Nguyen TAK, <strong>Nguyen K</strong>, Nguyen MD, Pham HT, Le THH, Nguyen NH. HOPE – A novel UAV design suitable for efficient VTOL and cruising missionsmissions. ICIUS, Beijing, China, 2019.",
+    text: "TL Ngo, DT Hoang, TAK Nguyen, <strong>K Nguyen</strong>, MD Nguyen, HT Pham, THH Le, NH Nguyen. HOPE – A novel UAV design suitable for efficient VTOL and cruising missionsmissions. ICIUS, Beijing, China, 2019.",
     pdf: ""
   },
 
   {
-    text: "<strong>Nguyen K</strong>, Nguyen NH, Le THH. Numerical approach for the vertical take-off and landing UAVs using the virtual blade model. SAWAE, Thailand, 2018. (Presenter)",
+    text: "<strong>K Nguyen</strong>, NH Nguyen, THH Le. Numerical approach for the vertical take-off and landing UAVs using the virtual blade model. SAWAE, Thailand, 2018. (Presenter)",
     pdf: ""
   }
 ];
