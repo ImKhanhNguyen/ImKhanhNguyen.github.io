@@ -6,7 +6,7 @@ h1, h2, h3, h4, h5, h6, p, a, li {
     margin-bottom: 20px;
     padding: 0.2;
     background-color: transparent; /* <img src="assets/images/Fish_animated_photo.jpg" alt="Profile Photo" style="height: auto; max-height: 150px; border-radius: 10%;">     Optional: Light background color */
-    color: #000; /* Default text color */
+    color: rgb(44, 43, 43); /* Default text color */
     zoom: 100%;
     text-decoration: none; /* Removes underline */
 }
@@ -220,9 +220,7 @@ section p {
     line-height: 1.6;
     display: block;
     margin-top: 10px;
-
 }
-
 
 /* Footer styling */
 footer {
@@ -417,7 +415,7 @@ nav .btn a {
     min-width: fit-content;
     font-size: calc(var(--sitename-size) * 0.55);
     background-color: transparent;
-    padding: 0em 0.55em;
+    padding: 0em 0em;
     white-space: nowrap;
     display: inline-block;
 }
@@ -425,7 +423,7 @@ nav .btn a {
 .inline-btn a,
 .inline-btn:hover a {
     display: inline-block;
-    padding: 0em 0.55em;
+    padding: 0em 0.5em;
     line-height: 1;
     white-space: nowrap;
 }
@@ -533,7 +531,7 @@ hr {
         gap: 8px;
         white-space: nowrap;
     }
-.profile-pic {
+    .profile-pic {
     display: block;
     margin: auto;
     height: auto;
