@@ -4,7 +4,7 @@ window.PUBLICATIONS_DATA = [
     pdf: ""
   },
   {
-    "text": "G Ha, <strong>K Nguyen</strong>, J Yu, T Kang, HC Park. Aerodynamic characteristics of flapping wings at takeoff under very low air density and low gravity. Acta Astronautica, 204 1223-1235,2026. (JCR 2026, Q1, IF = 3.9, Rank: 10/59, Top 17% in Eng., Aerospace)",
+    "text": "G Ha, <strong>K Nguyen</strong>, J Yu, T Kang, HC Park. Aerodynamic characteristics of flapping wings at takeoff under very low air density and low gravity. Acta Astronautica, 204 1223-1235, 2026. (JCR 2026, Q1, IF = 3.7, Rank: 10/59, Top 17% in Eng., Aerospace)",
     "pdf": ""
   },
   {
