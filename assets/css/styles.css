@@ -191,6 +191,28 @@ section h2 {
     }
 }
 
+@media (max-width: 600px) {
+    .custom-background > nav {
+        width: 100%;
+        max-width: none;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .custom-background > nav .btn,
+    .custom-background > nav .btn:hover {
+        width: 100%;
+        min-width: 0;
+        font-size: 0.8em;
+    }
+
+    .custom-background > nav .btn a {
+        width: 100%;
+        padding: 0.5em 0.1em;
+        justify-content: center;
+        font-size: 0.85em;
+    }
+}
+
 /* Container styling */
 .container {
     width: 95%;            /* Wider on mobile */
@@ -415,9 +437,13 @@ nav .btn a {
     min-width: fit-content;
     font-size: calc(var(--sitename-size) * 0.55);
     background-color: transparent;
-    padding: 0em 0em;
+    padding: 0em 0.45em;
     white-space: nowrap;
     display: inline-block;
+}
+
+.custom-background + nav {
+    column-gap: 14px;
 }
 
 .inline-btn a,
