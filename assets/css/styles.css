@@ -193,8 +193,8 @@ section h2 {
 
 @media (max-width: 600px) {
     .custom-background > nav {
-        width: 100%;
-        max-width: none;
+        width: calc(var(--layout-width) * 1.0);
+        max-width: calc(var(--layout-max-width) * 1.0);
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
