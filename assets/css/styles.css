@@ -438,7 +438,7 @@ footer {
 /* Two-column layout for page sections */
 .column-layout {
     display: grid;
-    grid-template-columns: 0.55fr 0.45fr;  /* Responsive columns */
+    grid-template-columns: 0.45fr 0.55fr;  /* Responsive columns */
     gap: 0px;
     margin: 0 auto 10px auto;
     width: calc(var(--layout-width) * 1.0);
@@ -859,6 +859,33 @@ hr {
     .research-field-card:first-child .research-field-figure video,
     .aquatic-research-card .research-field-figure img {
         max-height: 240px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav.project-links {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        width: calc(var(--layout-width) * 1.0) !important;
+        max-width: calc(var(--layout-max-width) * 1.0) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding: 0 !important;
+    }
+
+    nav.project-links > .project-background {
+        width: auto !important;
+        max-width: none !important;
+        margin: 0 !important;
+        box-sizing: border-box;
+    }
+
+    nav.project-links .inline-btn {
+        width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box;
+        text-align: center;
+        white-space: normal;
     }
 }
 
