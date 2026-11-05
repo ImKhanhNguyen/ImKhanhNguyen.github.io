@@ -199,8 +199,24 @@
     <p>Seoul, Republic of Korea</p>
     </div>
     </div>
+    <p class="web-counter" aria-live="polite"># <span id="page-view-count">--</span></p>
     </div>
 
 </div>
+<script>
+    (() => {
+        const counterElement = document.getElementById('page-view-count');
+        if (!counterElement) return;
+
+        try {
+            const storageKey = 'narom-page-views';
+            const pageViews = Number.parseInt(localStorage.getItem(storageKey) || '0', 10) + 1;
+            localStorage.setItem(storageKey, String(pageViews));
+            counterElement.textContent = String(pageViews);
+        } catch (error) {
+            counterElement.textContent = 'unavailable';
+        }
+    })();
+</script>
 </body>
 </html>
