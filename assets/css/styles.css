@@ -271,11 +271,13 @@ section h2 {
         flex-wrap: wrap;
         gap: 0;
         align-items: stretch;
+        overflow: hidden;
     }
 
     nav.project-links > .project-background {
         width: 50%;
         max-width: 50%;
+        box-sizing: border-box;
     }
 
     nav.project-links .inline-btn {
@@ -313,6 +315,36 @@ section h2 {
     }
 
 
+}
+
+@media (max-width: 768px) {
+    nav.project-links {
+        width: calc(var(--layout-width) * 1.0);
+        max-width: calc(var(--layout-max-width) * 1.0);
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        gap: 0;
+    }
+
+    nav.project-links > .project-background {
+        width: 50%;
+        max-width: 50%;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    nav.project-links .inline-btn {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        padding: 0.35em 0.2em;
+        font-size: 1rem;
+        line-height: 1.2;
+        text-align: center;
+        white-space: normal;
+        box-sizing: border-box;
+    }
 }
 
 /* Container styling */
